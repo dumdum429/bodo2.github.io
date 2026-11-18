@@ -1,0 +1,286 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Senegal Panorama</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400;1,600&display=swap">
+<style>
+/* Layout: academic reading page. Fixed contents column at left on wide screens, single column of running text (about 68ch) at right. */
+:root {
+ --bg: #f6f8f9;
+ --surface: #ffffff;
+ --fg: #1c2429;
+ --muted: #566771;
+ --accent: #0e5a6b;
+ --accent-soft: #dcebef;
+ --rule: #d6dee2;
+ --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+ --sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+ :root:not([data-theme="light"]) {
+  --bg: #11171a;
+  --surface: #171f23;
+  --fg: #e3e9ec;
+  --muted: #9aa9b1;
+  --accent: #72c4d6;
+  --accent-soft: #1d3138;
+  --rule: #29353b;
+  color-scheme: dark;
+ }
+}
+:root[data-theme="dark"] {
+ --bg: #11171a;
+ --surface: #171f23;
+ --fg: #e3e9ec;
+ --muted: #9aa9b1;
+ --accent: #72c4d6;
+ --accent-soft: #1d3138;
+ --rule: #29353b;
+ color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 1.5rem; }
+body {
+ background: var(--bg);
+ color: var(--fg);
+ font: 400 18px/1.7 var(--serif);
+ padding-block: 0;
+ padding-left: max(16px, env(safe-area-inset-left, 0px));
+ padding-right: max(16px, env(safe-area-inset-right, 0px));
+ -webkit-text-size-adjust: 100%;
+}
+a { color: var(--accent); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.shell {
+ max-width: 1120px;
+ margin: 0 auto;
+ display: grid;
+ grid-template-columns: minmax(0, 1fr);
+ gap: 1.5rem;
+ padding-block: 2rem 4rem;
+}
+.head { grid-column: 1 / -1; padding-bottom: 1.25rem; border-bottom: 2px solid var(--fg); }
+.head h1 {
+ font: 700 clamp(2rem, 6vw, 3.4rem)/1.1 var(--sans);
+ letter-spacing: -0.01em;
+ margin: 0;
+ text-wrap: balance;
+ overflow-wrap: anywhere;
+}
+
+/* contents */
+.toc-d { display: none; }
+.toc-m {
+ background: var(--surface);
+ border: 1px solid var(--rule);
+ border-radius: 6px;
+ font: 400 15px/1.4 var(--sans);
+}
+.toc-m summary {
+ cursor: pointer;
+ padding: 0.8rem 1rem;
+ font-weight: 600;
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ font-size: 13px;
+ color: var(--muted);
+}
+.toc-m ol { margin: 0; padding: 0 1rem 0.8rem; list-style: none; }
+.toc ol { margin: 0; padding: 0; list-style: none; }
+.toc li { margin: 0; }
+.toc a {
+ display: block;
+ padding: 0.4rem 0 0.4rem 0.75rem;
+ border-left: 2px solid var(--rule);
+ color: var(--muted);
+ text-decoration: none;
+}
+.toc a:hover { color: var(--fg); }
+.toc a.on { color: var(--accent); border-left-color: var(--accent); font-weight: 600; }
+.toc li.part a { margin-top: 0.6rem; color: var(--fg); font-weight: 600; }
+.toc-label {
+ font: 600 13px/1 var(--sans);
+ letter-spacing: 0.06em;
+ text-transform: uppercase;
+ color: var(--muted);
+ margin: 0 0 0.75rem;
+}
+
+/* text */
+main { min-width: 0; max-width: 70ch; }
+section { margin: 0 0 2.75rem; }
+.intro { margin-bottom: 3rem; }
+.lede { font-size: 1.15rem; line-height: 1.65; }
+h2 { font-family: var(--sans); text-wrap: balance; margin: 0 0 1rem; line-height: 1.2; }
+h2.sec {
+ font-size: 1.6rem;
+ font-weight: 700;
+ padding-top: 1.25rem;
+ border-top: 1px solid var(--rule);
+}
+h2.part {
+ font-size: 1.9rem;
+ font-weight: 700;
+ padding-top: 1.5rem;
+ border-top: 2px solid var(--fg);
+}
+p { margin: 0 0 1.05rem; overflow-wrap: break-word; }
+p.sub {
+ font-family: var(--sans);
+ font-size: 1.05rem;
+ margin: 1.6rem 0 0.6rem;
+ color: var(--accent);
+}
+strong { font-weight: 600; }
+ul { margin: 0 0 1.2rem; padding: 0 0 0 1.3rem; }
+li { margin: 0 0 0.7rem; padding-left: 0.2rem; overflow-wrap: break-word; }
+li::marker { color: var(--accent); }
+
+@media (min-width: 960px) {
+ .shell { grid-template-columns: 250px minmax(0, 1fr); gap: 3rem; }
+ .toc-m { display: none; }
+ .toc-d {
+  display: block;
+  grid-column: 1;
+  grid-row: 2;
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  font: 400 14.5px/1.35 var(--sans);
+ }
+ main { grid-column: 2; grid-row: 2; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+figure.img{margin:1.4rem 0 1.8rem;background:var(--surface);border:1px solid var(--rule);border-radius:6px;overflow:hidden}
+figure.img .ph{display:flex;align-items:center;justify-content:center;min-height:210px;aspect-ratio:16/9;padding:1rem;text-align:center;color:var(--muted);font:600 13px/1.4 var(--sans);background:repeating-linear-gradient(45deg,var(--accent-soft),var(--accent-soft) 12px,var(--surface) 12px,var(--surface) 24px)}
+figure.img img{display:block;width:100%;height:auto;max-height:520px;object-fit:cover}
+figure.img figcaption{padding:.6rem .9rem;font:400 13.5px/1.45 var(--sans);color:var(--muted)}
+figure.img figcaption a{color:var(--accent)}
+</style>
+<div class="shell">
+ <header class="head"><h1>Senegal:Panorama</h1></header>
+
+ <details class="toc toc-m">
+  <summary>Sumário</summary>
+  <ol><li class=""><a href="#s1">2.1 Formação dos povos originais e do país atual</a></li><li class=""><a href="#s2">2.2 Principais etnias</a></li><li class=""><a href="#s3">2.3 Religião</a></li><li class=""><a href="#s4">2.4 Idioma</a></li><li class=""><a href="#s5">2.5 Economia: principais produtos</a></li><li class=""><a href="#s6">2.6 Características culturais mais marcantes</a></li><li class=""><a href="#s7">2.7 Processo de colonização e de reconquista</a></li><li class=""><a href="#s8">2.8 Mapa geopolítico e características geográficas</a></li><li class=""><a href="#s9">2.9 Outros destaques</a></li><li class="part"><a href="#s10">Fontes</a></li></ol>
+ </details>
+
+ <nav class="toc toc-d" aria-label="Sumário">
+  <p class="toc-label">Sumário</p>
+  <ol><li class=""><a href="#s1">2.1 Formação dos povos originais e do país atual</a></li><li class=""><a href="#s2">2.2 Principais etnias</a></li><li class=""><a href="#s3">2.3 Religião</a></li><li class=""><a href="#s4">2.4 Idioma</a></li><li class=""><a href="#s5">2.5 Economia: principais produtos</a></li><li class=""><a href="#s6">2.6 Características culturais mais marcantes</a></li><li class=""><a href="#s7">2.7 Processo de colonização e de reconquista</a></li><li class=""><a href="#s8">2.8 Mapa geopolítico e características geográficas</a></li><li class=""><a href="#s9">2.9 Outros destaques</a></li><li class="part"><a href="#s10">Fontes</a></li></ol>
+ </nav>
+
+ <main>
+<section class="intro">
+<figure class="img"><img src="imagens/01-dakar.jpg" alt="Litoral de Dakar, capital do Senegal" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/01-dakar.jpg</div>'"><figcaption>Litoral de Dakar, capital do Senegal</figcaption></figure>
+
+<p class="lede">O Senegal fica na costa atlântica da África Ocidental, tem cerca de 18 milhões de habitantes e área de aproximadamente 197 mil km², um pouco menor que o estado do Paraná. A capital é Dakar. É uma república presidencialista com um Parlamento de câmara única (165 deputados). Os dados oficiais mais usados para etnias, religiões e idiomas vêm do CIA World Factbook e de censos nacionais, e variam um pouco de fonte para fonte.</p>
+</section>
+<section id="s1" class="sec-wrap">
+<h2 class="sec">2.1 Formação dos povos originais e do país atual</h2>
+<figure class="img"><img src="imagens/02-circulos-pedra-sine-ngayene.jpg" alt="Círculos de pedra de Sine Ngayène (UNESCO)" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/02-circulos-pedra-sine-ngayene.jpg</div>'"><figcaption>Círculos de pedra de Sine Ngayène (UNESCO)</figcaption></figure>
+<p><strong>Pré-história e antiguidade.</strong> A região foi habitada desde o Paleolítico. Dois legados marcantes aparecem na lista da UNESCO: os <strong>círculos de pedra da Senegâmbia</strong> (megálitos funerários erguidos ao longo de séculos, até cerca do século XVI) e os <strong>montes de conchas do delta do Saloum</strong>, formados por comunidades que viviam da coleta de moluscos e da pesca.</p>
+<p><strong>Tekrur e os impérios do Sahel.</strong> O reino de <strong>Tekrur</strong> (Takrur), no vale do rio Senegal, aparece em manuscritos árabes do século IX e viveu seu auge nos séculos X e XI, em paralelo ao Império de Gana. É o primeiro estado organizado do território e está ligado aos ancestrais dos povos Pulaar/Toucouleur. O Islã chegou a ele no século XI, na onda dos Almorávidas, que também contribuíram para derrubar Gana. Depois, o Império do Mali (séculos XIII e XIV) estendeu sua influência para o oeste e fez de Tekrur e dos reinos wolof seus tributários.</p>
+<p><strong>O Império Jolof (séculos XIII–XVI).</strong> Confederação de reinos wolof e serer, com tradição oral que atribui a fundação a Ndiadiane Ndiaye. Era uma união voluntária de estados, com um sistema político complexo e estratificado em castas. Seu enfraquecimento veio da perda de domínio sobre as zonas costeiras, que passaram a comerciar diretamente com europeus. Em <strong>1549</strong>, na batalha de Danki, o governante de Kajoor liderou a revolta que o desintegrou. Surgiram então reinos rivais: <strong>Kajoor (Cayor)</strong>, <strong>Baol</strong>, <strong>Waalo</strong>, <strong>Sine</strong>, <strong>Saloum</strong> e, no vale do rio, o <strong>Fouta Toro</strong>. Na Alta Casamance e na Gâmbia, o reino mandinga de <strong>Kaabu</strong> teve influência até o século XIX.</p>
+<p><strong>Do mapa colonial ao país.</strong> As fronteiras atuais foram desenhadas pela França, que fez de Saint-Louis e depois de Dakar centros de poder na África Ocidental Francesa. O Senegal se tornou autônomo em 1958, formou com o Sudão Francês a Federação do Mali (1959) e, em <strong>20 de junho de 1960</strong>, a Federação foi reconhecida como independente (o acordo de transferência de poder com a França foi assinado em 4 de abril de 1960). A Federação se desfez em <strong>20 de agosto de 1960</strong>, quando Senegal e Mali declararam independência separadamente. Léopold Sédar Senghor foi eleito presidente em 5 de setembro de 1960. A data nacional é 4 de abril, em referência a esse acordo.</p>
+</section>
+<section id="s2" class="sec-wrap">
+<h2 class="sec">2.2 Principais etnias</h2>
+<figure class="img"><img src="imagens/03-danca-mascaras.jpg" alt="Apresentação de dança tradicional com máscaras e fantasias" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/03-danca-mascaras.jpg</div>'"><figcaption>Apresentação de dança tradicional com máscaras e fantasias</figcaption></figure>
+<p>Existem cerca de 20 grupos étnicos. Estimativa de 2019 (CIA World Factbook): <strong>Wolof 39,7%</strong>, <strong>Pulaar 27,5%</strong> (inclui Peul/Fula e Toucouleur), <strong>Serer 16%</strong>, <strong>Mandinka 4,9%</strong>, <strong>Jola 4,2%</strong>, <strong>Soninke 2,4%</strong>, outros 5,4% (inclui pequenas comunidades de europeus e libaneses). Há também Lebou (subgrupo wolof da península de Cap-Vert), Bassari, Bedik, Mouros, Manjak, Balante e outros.</p>
+<ul><li><strong>Wolof:</strong> maioria nas cidades e no centro-norte. Foram os fundadores do Jolof, são majoritariamente muçulmanos (Mourides e Tijanis) e sua língua virou língua franca, fenômeno chamado de "wolofização".</li><li><strong>Pulaar (Peul e Toucouleur):</strong> pastoralistas e agricultores do norte, do vale do rio Senegal e do leste. Foram dos primeiros a se islamizar e deram líderes religiosos e políticos, como El Hadj Omar Tall.</li><li><strong>Serer:</strong> centro-oeste (Sine e Saloum). Agricultores, pescadores e comunidade com forte tradição religiosa própria. Têm uma parcela significativa de cristãos. Senghor era serer.</li><li><strong>Jola (Diola):</strong> Casamance, cultivadores de arroz, com organização social pouco hierárquica e identidade étnica muito valorizada.</li><li><strong>Mandinka e Soninke:</strong> herdeiros dos impérios do Mali e de Gana. Os mandingas estão no sul e sudeste, os soninkês no leste, com forte tradição migratória.</li></ul>
+<p>A sociedade tradicional de vários povos (principalmente wolof, serer e pulaar) tinha estratos hereditários: nobres, artesãos e griots (casta dos <em>géwël</em>), e descendentes de pessoas escravizadas. Esses vestígios ainda aparecem nos sobrenomes e nos casamentos. Entre os grupos existe o <strong>cousinage à plaisanterie</strong> (parentesco por gracejo): uma tradição de se provocar com humor e evitar conflitos, que contribui para a convivência pacífica. Os casamentos entre etnias são comuns.</p>
+</section>
+<section id="s3" class="sec-wrap">
+<h2 class="sec">2.3 Religião</h2>
+<figure class="img"><img src="imagens/04-mesquita-touba.jpg" alt="Grande Mesquita de Touba" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/04-mesquita-touba.jpg</div>'"><figcaption>Grande Mesquita de Touba</figcaption></figure>
+<p><strong>Religiões originais.</strong> Antes do Islã predominavam religiões locais, com culto a ancestrais, espíritos e divindades criadoras. Os <strong>Serer</strong> reconhecem <strong>Roog</strong> como ser supremo e mantêm rituais próprios; os <strong>Jola</strong> chamam o deus supremo de <strong>Emitai</strong>. Sobre as crenças pré-islâmicas dos wolof pouco se sabe: não há registros orais nem escritos que as detalhem. Hoje as religiões tradicionais são minoritárias (menos de 1% da população) mas influenciam rituais de nascimento, casamento e morte e práticas de proteção (<em>gris-gris</em>).</p>
+<p><strong>Islã.</strong> Chegou no século XI com os Almorávidas. Expandiu-se nos séculos seguintes, em parte por movimentos reformistas e "jihads" lideradas por marabouts (como a do Almamato do Fouta Toro, no século XVIII, e as de Maba Diakhou Bâ e El Hadj Omar no século XIX). Hoje cerca de <strong>97%</strong> da população é muçulmana (maioria sunita, de rito maliquita) e organizada em <strong>irmandades sufis</strong>:</p>
+<ul><li><strong>Tijaniyya:</strong> a maior. Tem centros em Tivaouane e Kaolack.</li><li><strong>Mouridismo (Muridiyya):</strong> fundada por <strong>Cheikh Amadou Bamba</strong> no fim do século XIX. Tem a cidade santa de <strong>Touba</strong> e o <em>Grand Magal</em>, peregrinação anual que reúne milhões. Valoriza o trabalho como forma de oração.</li><li>Qadiriyya e Layène, menores.</li></ul>
+<p>As irmandades têm grande peso social e político. Os líderes (os <em>califes</em> e marabouts) são ouvidos por presidentes e candidatos, e muitos analistas ligam esse sistema à estabilidade do país.</p>
+<p><strong>Religião do colonizador.</strong> A França levou o <strong>cristianismo católico</strong>: cerca de 3% hoje, concentrado entre Serer, Jola, na Casamance e em Dakar. Há peregrinações importantes, como a de Popenguine. A França também levou o princípio da <strong>laicidade</strong>, mantido pelo Estado senegalês. Casamentos e convívio entre muçulmanos e cristãos são comuns, e Senghor, católico, governou um país de maioria muçulmana por 20 anos.</p>
+</section>
+<section id="s4" class="sec-wrap">
+<h2 class="sec">2.4 Idioma</h2>
+<p><strong>Línguas originais.</strong> O Senegal tem mais de 20 línguas, quase todas do ramo atlântico da família Níger-Congo. Seis são reconhecidas como <strong>línguas nacionais</strong>: <strong>wolof</strong>, <strong>pulaar</strong>, <strong>serer (sereer)</strong>, <strong>jola (diola)</strong>, <strong>mandinka</strong> e <strong>soninke</strong>. O <strong>wolof</strong> é a língua franca: muitos senegaleses que não são wolof o falam. Já se escreveu em caracteres árabes (<em>wolofal</em>), uso ainda presente em contextos religiosos. Também há o árabe, usado no ensino religioso.</p>
+<p><strong>Língua do colonizador.</strong> O <strong>francês</strong> é o idioma oficial, usado na administração, nos tribunais, no ensino superior, na imprensa e na diplomacia. O sistema escolar foi desenhado para ensiná-lo, e o resultado é um país multilíngue: muitos falam duas ou três línguas e fazem <em>code-switching</em> entre wolof e francês (o "wolof urbano" de Dakar tem muitas palavras francesas). Em Ziguinchor e na Casamance ainda há influência do crioulo de base portuguesa.</p>
+</section>
+<section id="s5" class="sec-wrap">
+<h2 class="sec">2.5 Economia: principais produtos</h2>
+<figure class="img"><img src="imagens/05-pirogues.jpg" alt="Pirogues de pesca artesanal" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/05-pirogues.jpg</div>'"><figcaption>Pirogues de pesca artesanal</figcaption></figure>
+<ul><li><strong>Mineração:</strong> ouro (uma das principais exportações, com forte alta de preço em 2025), fosfatos e ácido fosfórico, zircônio, sal e calcário para cimento.</li><li><strong>Hidrocarbonetos:</strong> o campo offshore de <strong>Sangomar</strong> (operado pela australiana Woodside com a estatal Petrosen) começou a produzir em <strong>junho de 2024</strong>: 16,9 milhões de barris em 2024 e 36,1 milhões em 2025. O projeto de gás <strong>Grande Tortue Ahmeyim (GTA)</strong>, compartilhado com a Mauritânia, entrou em operação no início de 2025.</li><li><strong>Pesca:</strong> pilar de renda e de alimentação. A pesca artesanal, com pirogues coloridas, é enorme, e há tensões com frotas industriais estrangeiras.</li><li><strong>Agricultura:</strong> amendoim (cultura de exportação histórica, impulsionada pelos franceses), milho-miúdo, arroz, milho, mandioca, feijão-fradinho, melancia e algodão.</li><li><strong>Turismo, serviços e remessas:</strong> praias (Saly, Cap Skirring), Gorée, Saint-Louis, o Lago Retba e parques. Remessas da diáspora (França, Itália, Espanha, EUA) são uma fonte importante de renda.</li><li><strong>Moeda e blocos:</strong> franco CFA (XOF), usado na UEMOA/WAEMU, com paridade fixa com o euro.</li></ul>
+<p>As principais exportações em 2024 incluíram ouro (cerca de 15% do total), derivados de petróleo, ácido fosfórico e peixe congelado. O Mali, a Suíça, a China e a Índia estão entre os principais compradores. O PIB per capita ficou perto de US$ 1.760 em 2024. A entrada de petróleo e gás acelerou o crescimento, mas o país enfrenta <strong>dívida pública elevada</strong> e negociações difíceis com o FMI, o que está no centro da crise política atual.</p>
+</section>
+<section id="s6" class="sec-wrap">
+<h2 class="sec">2.6 Características culturais mais marcantes</h2>
+<figure class="img"><img src="imagens/06-kora.jpg" alt="Músico tocando kora" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/06-kora.jpg</div>'"><figcaption>Músico tocando kora</figcaption></figure>
+<ul><li><strong>Teranga:</strong> palavra wolof para hospitalidade e generosidade; um valor nacional e o nome da seleção ("Leões da Teranga"). Receber bem, dividir a refeição e saudar longamente são regras sociais.</li><li><strong>Griots (géwël):</strong> guardiões da história oral, da genealogia e da música. Tocam kora, xalam e a família de tambores <strong>sabar</strong> e <strong>tama</strong>.</li><li><strong>Música:</strong> <strong>mbalax</strong>, que mistura ritmos sabar com pop, jazz e salsa e foi popularizado por <strong>Youssou N'Dour</strong> (o sucesso "7 Seconds", com Neneh Cherry, foi dos anos 1990), além de Baaba Maal, Ismaël Lô e Orchestra Baobab. Saint-Louis tem um dos festivais de jazz mais tradicionais da África.</li><li><strong>Moda:</strong> <em>grand boubou</em>, bazin e tecidos tingidos; a Semana de Moda de Dakar. Os homens e mulheres de Dakar são conhecidos pela elegância (a cultura <em>sapeur</em> é mais associada ao Congo).</li><li><strong>Ritmo social:</strong> o chá <strong>ataya</strong>, servido em três rodadas (forte, doce e suave), é um ritual de conversa. O <em>sargal</em> e o <em>diom</em> (honra e dignidade) regulam relações.</li><li><strong>Cousinage à plaisanterie:</strong> a brincadeira ritual entre etnias, já citada.</li></ul>
+</section>
+<section id="s7" class="sec-wrap">
+<h2 class="sec">2.7 Processo de colonização e de reconquista</h2>
+<figure class="img"><img src="imagens/07-ilha-goree.jpg" alt="Ilha de Gorée" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/07-ilha-goree.jpg</div>'"><figcaption>Ilha de Gorée</figcaption></figure>
+<p><strong>Contatos e tráfico (séculos XV–XVIII).</strong> Os portugueses chegam à costa em 1444. Holandeses (que tomaram Gorée em 1617), ingleses (que ocuparam Gorée e Saint-Louis em várias ocasiões) e franceses disputam o litoral. Os franceses fundaram <strong>Saint-Louis em 1659</strong> e tomaram <strong>Gorée em 1677</strong>. As duas ilhas se tornaram centros do <strong>tráfico atlântico de pessoas escravizadas</strong>. A maior parte do tráfico era alimentada por guerras entre estados da própria região, o que o reforçou com armas de fogo.</p>
+<p><strong>Expansão (século XIX).</strong> Com a abolição da escravidão nas colônias francesas (1848), a França buscou novas fontes de lucro, em especial o amendoim. Sob o governador <strong>Louis Faidherbe</strong> (1854–1865) ocorreu a conquista do interior: <strong>Dakar foi fundada em 1857</strong>, foi criado o corpo dos <strong>tirailleurs sénégalais</strong> e feitas as primeiras linhas de ferrovia e telégrafo (Dakar–Saint-Louis, depois Dakar–Níger). Em 1895 foi criada a <strong>África Ocidental Francesa (AOF)</strong>, com capital em Saint-Louis e, a partir de 1902, em <strong>Dakar</strong>.</p>
+<p><strong>Assimilação e as Quatro Comunas.</strong> Saint-Louis, Gorée, Dakar e Rufisque tiveram direitos políticos desde 1848 e, em 1916, a lei <strong>Blaise Diagne</strong> confirmou a cidadania plena dos <em>originaires</em>. Foi um caso único na África colonial francesa. O resto da população vivia sob o regime do <em>indigénat</em>, com trabalho forçado, impostos e recrutamento militar.</p>
+<p class="sub"><strong>Resistências.</strong></p>
+<ul><li><strong>Lat Dior Diop (c. 1842–1886), damel de Kajoor:</strong> aliou-se e rompeu com os franceses várias vezes, recusou a ferrovia em seu território e morreu em combate em Dékhélé.</li><li><strong>Maba Diakhou Bâ (morto em 1867):</strong> líder religioso e militar do Saloum, aliado de Lat Dior.</li><li><strong>El Hadj Omar Tall:</strong> fundou um império islâmico no Alto Senegal e Níger e enfrentou Faidherbe (cerco de Médine, 1857).</li><li><strong>Kumba Ndoffène Famak Joof</strong>, maad a sinig (rei) de Sine, resistiu na batalha de Logandème.</li><li><strong>Cheikh Amadou Bamba (1853–1927):</strong> resistência não violenta. Foi exilado no Gabão (1895–1902) e depois na Mauritânia e sob vigilância no país. Transformou o exílio em prestígio e fundou a irmandade Mouride.</li><li><strong>Aline Sitoé Diatta (1920–1944):</strong> na Casamance, lutou contra a requisição de arroz e o recrutamento durante a Segunda Guerra, foi presa e exilada em Tombuctu, onde morreu.</li></ul>
+<p><strong>Segunda Guerra e Thiaroye (1944).</strong> Milhares de africanos lutaram pela França. Em <strong>1º de dezembro de 1944</strong>, no campo de Thiaroye, nos arredores de Dakar, soldados que cobravam pagamentos atrasados foram baleados por forças francesas. A França falou em 35 mortos; historiadores estimam entre 300 e 400, e os túmulos continuam sem identificação . Durante décadas o caso foi minimizado. Em <strong>novembro de 2024</strong>, Emmanuel Macron reconheceu o episódio como "massacre" em carta ao presidente Faye, que anunciou um memorial e um centro de pesquisa sobre o tema. A investigação segue aberta.</p>
+<p><strong>Caminho para a independência.</strong> Em 1946 os africanos passam a eleger deputados em maior número (Léopold Senghor e Lamine Guèye foram os senegaleses de destaque). A Constituição de 1958 criou a Comunidade Francesa e o Senegal virou república autônoma em novembro de 1958. A Federação do Mali (Senegal + Sudão Francês) foi um projeto de unidade africana que durou poucos meses: ficou independente em <strong>20 de junho de 1960</strong>. O Senegal proclamou sua independência separada em <strong>20 de agosto de 1960</strong>.</p>
+<p class="sub"><strong>Pós-independência e "reconquista".</strong></p>
+<ul><li><strong>Senghor (1960–1980):</strong> poeta e teórico da Négritude, e o primeiro africano eleito para a Académie française (1983). Deixou o poder voluntariamente.</li><li><strong>Abdou Diouf (1981–2000)</strong>, <strong>Abdoulaye Wade (2000–2012)</strong> e <strong>Macky Sall (2012–2024)</strong>: três alternâncias pelas urnas, sem golpe de Estado bem-sucedido, algo raro na região.</li><li><strong>Casamance:</strong> desde 1982 há um conflito de baixa intensidade com o movimento separatista MFDC, que diminuiu bastante nos últimos anos.</li><li><strong>2024:</strong> Bassirou Diomaye Faye venceu a eleição presidencial de março com a promessa de redefinir as relações com a França e dar mais soberania ao país (sobre recursos naturais, moeda e defesa). Em dezembro de 2024 o país lembrou os 80 anos de Thiaroye. Em <strong>17 de julho de 2025</strong>, a França entregou suas últimas bases militares (Camp Geille e a facilidade do aeroporto de Dakar), encerrando uma presença de mais de 60 anos.</li></ul>
+<p><strong>Cenário político em novembro de 2026.</strong> O partido Pastef, de Faye e do ex-primeiro-ministro <strong>Ousmane Sonko</strong>, tem 130 dos 165 deputados desde as eleições de novembro de 2024. Os dois aliados romperam em torno da política de dívida e da relação com o FMI: Faye demitiu Sonko do cargo de primeiro-ministro em <strong>22 de maio de 2026</strong>; Sonko foi eleito presidente da Assembleia Nacional dias depois, foi reeleito líder do Pastef em junho, e Faye lançou seu próprio partido em <strong>25 de julho de 2026</strong>. A partir de novembro de 2026, a Constituição permite ao presidente dissolver a Assembleia.</p>
+</section>
+<section id="s8" class="sec-wrap">
+<h2 class="sec">2.8 Mapa geopolítico e características geográficas</h2>
+<figure class="img"><img src="imagens/08-lago-retba.jpg" alt="Lago Retba (Lago Rosa), com extração de sal" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/08-lago-retba.jpg</div>'"><figcaption>Lago Retba (Lago Rosa), com extração de sal</figcaption></figure>
+<ul><li><strong>Localização:</strong> extremo oeste da África continental, na costa do Atlântico. Dakar fica na península de <strong>Cap-Vert</strong>, e a Pointe des Almadies é o ponto mais ocidental do continente.</li><li><strong>Fronteiras:</strong> Mauritânia (norte, fronteira no rio Senegal), Mali (leste), Guiné (sudeste), Guiné-Bissau (sul) e <strong>Gâmbia</strong>, um país estreito encravado ao longo do rio Gâmbia que quase divide o Senegal em dois. A <strong>Casamance</strong>, ao sul, fica ligada ao resto do país só por rota via Gâmbia (ou pela ponte de Farafenni/balsas e pela ponte Senegâmbia inaugurada em 2019).</li><li><strong>Relevo:</strong> predominantemente plano, com planícies baixas. Pontos mais altos no sudeste, perto da Guiné.</li><li><strong>Clima:</strong> tropical seco, com estação das chuvas de junho a outubro. Norte semiárido (Sahel, com a região do Ferlo), centro de savana e sul subúmido com florestas e mangues.</li><li><strong>Rios:</strong> Senegal (norte, fronteira com a Mauritânia), <strong>Gâmbia</strong>, <strong>Saloum</strong> (delta com mais de 200 ilhas e mangues) e <strong>Casamance</strong>.</li><li><strong>Lago Retba (Lago Rosa):</strong> cor causada por algas e alta salinidade; muito usado para extração de sal.</li><li><strong>Patrimônio da UNESCO (sete bens):</strong> ilha de <strong>Gorée</strong>, ilha de <strong>Saint-Louis</strong>, <strong>Parque Nacional de Niokolo-Koba</strong>, <strong>Santuário de Aves de Djoudj</strong> (mais de 1,5 milhão de aves de 365 espécies), <strong>delta do Saloum</strong>, <strong>círculos de pedra da Senegâmbia</strong> e <strong>paisagens culturais Bassari, Fula e Bedik</strong>.</li><li><strong>Divisão administrativa:</strong> 14 regiões. Dakar concentra população, indústria e serviços; o interior é mais rural.</li><li><strong>Geopolítica:</strong> membro da UEMOA, da CEDEAO, da União Africana e da Francofonia. É considerado uma democracia estável e um parceiro diplomático e de segurança importante para vários países. A relação com a França está em reformulação. Tem papel de mediador em crises da região e participa de missões de paz.</li></ul>
+<figure class="img"><img src="imagens/09-pelicanos-djoudj.jpg" alt="Pelicanos no Santuário de Aves de Djoudj" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/09-pelicanos-djoudj.jpg</div>'"><figcaption>Pelicanos no Santuário de Aves de Djoudj</figcaption></figure>
+</section>
+<section id="s9" class="sec-wrap">
+<h2 class="sec">2.9 Outros destaques</h2>
+<figure class="img"><img src="imagens/10-lutte.jpg" alt="Lutte sénégalaise (laamb)" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/10-lutte.jpg</div>'"><figcaption>Lutte sénégalaise (laamb)</figcaption></figure>
+<p class="sub"><strong>Esportes</strong></p>
+<ul><li><strong>Futebol:</strong> em 2002 a seleção venceu a França por 1 a 0 na abertura da Copa do Mundo e chegou às quartas de final, com o técnico Bruno Metsu. Em 2022 conquistou a primeira Copa Africana de Nações (edição de 2021, com Sadio Mané como destaque), vencendo o Egito nos pênaltis. Edouard Mendy, Kalidou Koulibaly e Pape Gueye integram a geração atual.</li><li><strong>AFCON 2025:</strong> em 18 de janeiro de 2026, em Rabat, o Senegal venceu o Marrocos por 1 a 0 na prorrogação, com gol de Pape Gueye e defesa de pênalti de Mendy, depois de os jogadores terem deixado o campo por alguns minutos em protesto contra um pênalti marcado para o Marrocos. Em <strong>17 de março de 2026</strong>, o comitê de apelação da CAF declarou o Senegal derrotado por WO (0 a 3) e deu o título ao Marrocos. O Senegal recorreu ao <strong>Tribunal Arbitral do Esporte (CAS)</strong>, que ouviu as partes em 8 de outubro e informou que a decisão completa sai no <strong>fim de novembro de 2026</strong>. Até 17 de novembro, o resultado final ainda estava em aberto.</li><li><strong>Lutte sénégalaise (laamb):</strong> esporte nacional de maior apelo popular, com golpes e luta corpo a corpo. Envolve rituais de proteção, cantos e danças, e seus campeões são astros que movimentam milhões. Há a variante <em>lutte avec frappe</em> (com socos).</li><li><strong>Basquete:</strong> a seleção feminina é uma das mais fortes da África.</li><li><strong>Dakar 2026:</strong> entre 31 de outubro e 13 de novembro de 2026, Dakar (com Saly e Diamniadio) sediou os <strong>Jogos Olímpicos da Juventude</strong>, o primeiro evento olímpico em solo africano, com cerca de 2.700 atletas e a primeira Equipe Olímpica de Refugiados em uma edição da Juventude.</li><li><strong>Rali Paris–Dakar:</strong> a prova terminava em Dakar até 2007 e deu fama internacional à cidade.</li></ul>
+<p class="sub"><strong>Culinária</strong></p>
+<figure class="img"><img src="imagens/11-prato-tipico.jpg" alt="Prato senegalês com legumes e cereal" loading="lazy" onerror="this.outerHTML='<div class=ph>Imagem não encontrada: imagens/11-prato-tipico.jpg</div>'"><figcaption>Prato senegalês com legumes e cereal</figcaption></figure>
+<ul><li><strong>Thieboudienne (ceebu jën):</strong> arroz cozido no molho de tomate com peixe e legumes (mandioca, cenoura, berinjela, repolho). Foi reconhecido pela UNESCO como patrimônio cultural imaterial em 2021.</li><li><strong>Yassa:</strong> frango ou peixe marinado em limão e cebola, de origem na Casamance.</li><li><strong>Mafé:</strong> ensopado de carne com pasta de amendoim.</li><li><strong>Thiakry (dessert):</strong> cuscuz de milho-miúdo com iogurte; bebidas como <strong>bissap</strong> (hibisco), <strong>bouye</strong> (fruto do baobá) e gengibre; chá <strong>ataya</strong>.</li></ul>
+<p class="sub"><strong>Artes, literatura e cinema</strong></p>
+<ul><li><strong>Literatura e pensamento:</strong> Léopold Senghor (Négritude); <strong>Cheikh Anta Diop</strong> (historiador e físico, cuja obra defende a origem africana do Egito antigo; a universidade de Dakar leva seu nome); <strong>Mariama Bâ</strong>, autora de "Uma carta tão longa" (1979), clássico da literatura feminista africana; Boubacar Boris Diop.</li><li><strong>Cinema:</strong> <strong>Ousmane Sembène</strong> (1923–2007), considerado "pai do cinema africano" ("A Garota Negra", 1966; "Xala"; "Camp de Thiaroye", 1988). Mais recentemente, <strong>Mati Diop</strong> ganhou o Grande Prêmio de Cannes por "Atlantique" (2019).</li><li><strong>Artes visuais:</strong> a <strong>Bienal Dak'Art</strong> (arte contemporânea africana), a pintura sob vidro (<em>sous-verre</em>), o <strong>Museu das Civilizações Negras</strong> (inaugurado em 2018) e o <strong>Monumento do Renascimento Africano</strong> (2010), uma das maiores estátuas do mundo.</li><li><strong>Dakar:</strong> cidade cosmopolita, com a mistura de mercados, arte de rua, música ao vivo e vida noturna.</li></ul>
+</section>
+<section id="s10" class="part-wrap">
+<h2 class="part">Fontes</h2>
+<ul><li>História: Wikipédia (History of Senegal, Jolof Empire, Tekrur, Four Communes), Matrix/Michigan State University (Exploring Africa), BlackPast, Minority Rights Group, Vikidia, tourisme.gouv.sn, Herodote.net.</li><li>Demografia e religião: CIA World Factbook (2019, 2024), Almanaque do Foreign Policy / AFPC, YES Abroad.</li><li>Economia: Coface, Allianz Trade, Crédit Agricole (International), Ecofin Agency (jan/2026), Trading Economics, ANSD.</li><li>Thiaroye e França: AP/Africanews, Euronews, AFP/Terra Daily, AllAfrica, The Conversation/Martin Mourre; retirada das bases: Reuters, AP, Financial Afrik.</li><li>Esporte e política recente: Al Jazeera, BBC, AllAfrica, Africanews, Gulf News, Vanguard, AP (via ABC/Africanews), IOC/Olympics.com, WAM.</li><li>Patrimônio: UNESCO (whc.unesco.org), Culture Trip, WorldAtlas.</li></ul>
+</section>
+ </main>
+</div>
+
+<script>
+(function () {
+ try {
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc-d a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var secs = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  if (!('IntersectionObserver' in window) || !secs.length) return;
+  var io = new IntersectionObserver(function (entries) {
+   entries.forEach(function (e) {
+    if (e.isIntersecting) {
+     links.forEach(function (a) { a.classList.remove('on'); });
+     var a = map[e.target.id];
+     if (a) a.classList.add('on');
+    }
+   });
+  }, { rootMargin: '-10% 0px -75% 0px' });
+  secs.forEach(function (s) { io.observe(s); });
+ } catch (err) {}
+})();
+</script>
+
+
+</body></html>
